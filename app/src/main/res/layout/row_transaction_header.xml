@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="TransactionRowModel"
+            type="com.crazytrends.expensemanager.appBase.roomsDB.transation.TransactionRowModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewLargeExtraBoldCommon"
+            android:layout_gravity="center"
+            android:background="@drawable/transaction_header_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_16sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingRight="@dimen/_24sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:text="@{TransactionRowModel.dateFormatted}"
+            android:textColor="@color/white"
+            android:paddingEnd="@dimen/_24sdp"
+            android:paddingStart="@dimen/_16sdp" />
+    </LinearLayout>
+</layout>

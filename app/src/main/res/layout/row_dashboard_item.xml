@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="DrawerRowModel"
+            type="com.crazytrends.expensemanager.appBase.models.drawer.DrawerRowModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/CardViewCommon"
+        >
+        <LinearLayout style="@style/LinearLayoutAddEditTransactionRow"
+            >
+        <LinearLayout
+            android:id="@+id/linMain"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_4sdp"
+            >
+
+            <ImageView
+                android:id="@+id/imgIcon"
+                style="@style/ImageViewButtonMediumCommon"
+                android:layout_margin="@dimen/_4sdp"
+                android:padding="@dimen/_4sdp"
+                android:src="@{DrawerRowModel.imgResId}"
+                android:tint="@color/actionbar" />
+
+            <TextView
+                style="@style/TextViewLargeRegularCommon"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:text="@{DrawerRowModel.name}"
+                android:textColor="@color/actionbar" />
+        </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

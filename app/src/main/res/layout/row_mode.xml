@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="ModeRowModel"
+            type="com.crazytrends.expensemanager.appBase.roomsDB.mode.ModeRowModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/LinearLayoutAddEditTransactionRow"
+            android:layout_margin="@dimen/_8sdp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewLargeRegularCommon"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="@{ModeRowModel.name}" />
+
+                <ImageView
+                    style="@style/ImageViewButtonMediumCommon"
+                    android:src="@{ModeRowModel.selected ? @drawable/checked :@drawable/unchecked}" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/textColorLight" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

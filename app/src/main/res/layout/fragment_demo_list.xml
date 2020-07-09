@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="DemoListModel"
+            type="com.crazytrends.expensemanager.appBase.models.demo.DemoListModel" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/linMain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <LinearLayout
+                android:id="@+id/linData"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:visibility="@{DemoListModel.isListData ? View.VISIBLE : View.GONE }"
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linNoData"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="@{DemoListModel.isListData ? View.GONE : View.VISIBLE }"
+                >
+
+
+
+                <ImageView
+                    style="@style/ImageViewNoDataCommon"
+                    android:src="@drawable/no_data"
+                    />
+
+                <TextView
+                    style="@style/TextViewNoDataTitle"
+                    android:text="@{DemoListModel.noDataText}"
+                    />
+
+                <TextView
+                    style="@style/TextViewNoDataDesc"
+                    android:text="@{DemoListModel.noDataDetail}"
+                    />
+            </LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabAdd"
+                style="@style/FloatingActionButtonCommon" />
+        </FrameLayout>
+    </LinearLayout>
+
+</layout>

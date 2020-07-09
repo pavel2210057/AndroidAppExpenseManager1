@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@android:color/transparent"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_8sdp"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/actionbar"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtTitle"
+                    style="@style/TextViewLargeExtraSemiBoldCommon"
+                    android:layout_width="wrap_content"
+                    android:padding="@dimen/_12sdp"
+                    android:text="@string/language"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_64sdp"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/_64sdp">
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/radioEnglish"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:checked="true"
+                            android:fontFamily="@font/semibold"
+
+                            android:buttonTint="@color/primey"
+                            android:text="@string/english"
+                            android:textSize="@dimen/_16sdp" />
+
+                        <RadioButton
+                            android:id="@+id/radioHindi"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:fontFamily="@font/semibold"
+                            android:text="@string/hindi"
+                            android:buttonTint="@color/primey"
+                            android:textSize="@dimen/_16sdp" />
+
+                        <RadioButton
+                            android:id="@+id/radioGujrati"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:fontFamily="@font/semibold"
+                            android:text="@string/gujrati"
+                            android:buttonTint="@color/primey"
+                            android:textSize="@dimen/_16sdp" />
+
+                        <RadioButton
+                            android:id="@+id/radioUrdu"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:fontFamily="@font/semibold"
+                            android:text="@string/urdu"
+                            android:buttonTint="@color/primey"
+                            android:textSize="@dimen/_16sdp" />
+
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_4sdp">
+
+                <TextView
+                    android:id="@+id/btnCancel"
+                    style="@style/TextViewLargeBoldCommon"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/rounded_rectangle_actionbar"
+                    android:gravity="center"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp"
+                    />
+
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/textColorRegular"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/btnOk"
+                    style="@style/TextViewLargeBoldCommon"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/rounded_rectangle_actionbar"
+                    android:gravity="center"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/apply"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

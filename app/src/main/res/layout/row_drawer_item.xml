@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="DrawerRowModel"
+            type="com.crazytrends.expensemanager.appBase.models.drawer.DrawerRowModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/linMain"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/_4sdp">
+
+            <ImageView
+                android:id="@+id/imgIcon"
+                style="@style/ImageViewButtonMediumCommon"
+                android:src="@{DrawerRowModel.imgResId}"
+                android:tint="@color/actionbar" />
+
+            <TextView
+                style="@style/TextViewLargeBoldCommon"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:gravity="center|start"
+                android:padding="@dimen/_4sdp"
+                android:text="@{DrawerRowModel.name}"
+                android:textColor="@color/actionbar" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

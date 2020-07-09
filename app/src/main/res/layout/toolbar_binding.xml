@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="ToolbarModel"
+            type="com.crazytrends.expensemanager.appBase.models.toolbar.ToolbarModel" />
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:aapt="http://schemas.android.com/aapt"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:background="@color/primey"
+        >
+
+        <FrameLayout
+            android:id="@+id/linMainTool"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="0dp"
+                android:theme="@style/AppTheme"
+                app:contentInsetEnd="0dp"
+                app:contentInsetStart="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/linBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="@{ToolbarModel.backMenu ? View.VISIBLE : View.GONE}"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/imgDrawer"
+                            style="@style/ImageViewButtonMediumCommon"
+                            android:src="@drawable/menu"
+                            android:visibility="@{ToolbarModel.isAdd ? View.GONE : View.GONE}" />
+
+                        <ImageView
+                            android:id="@+id/imgBack"
+                            style="@style/ImageViewButtonMediumCommon"
+                            android:layout_marginRight="@dimen/_4sdp"
+                            android:src="@drawable/back"
+                            android:tint="@color/white"
+                            android:visibility="@{ToolbarModel.isBack ? View.VISIBLE : View.GONE}"
+                            android:layout_marginEnd="@dimen/_4sdp" />
+
+                        <ImageView
+                            android:id="@+id/imageHome"
+                            android:layout_width="@dimen/_64sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:gravity="center"
+                            android:padding="@dimen/_4sdp"
+                            android:src="@drawable/drawer_home"
+                            android:tint="@color/white"
+                            android:visibility="@{ToolbarModel.home ? View.VISIBLE : View.GONE}" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginStart="@dimen/_8sdp">
+
+                            <TextView
+                                android:id="@+id/textTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_4sdp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/semibold"
+                                android:singleLine="true"
+                                android:text="@{ToolbarModel.title}"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_16sdp" />
+
+                            <Spinner
+                                android:id="@+id/spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0dp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/regular"
+                                android:padding="@dimen/_4sdp"
+                                android:src="@drawable/down_arrow"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:visibility="@{ToolbarModel.spinnerMenu ? View.VISIBLE : View.GONE}" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.SearchView
+                                android:id="@+id/search"
+                                style="@style/Style.SearchView"
+                                android:visibility="@{ToolbarModel.searchMenu ? View.VISIBLE : View.GONE}"
+                                app:queryHint="Search here" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/progressbar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:indeterminateDrawable="@drawable/progressbar_custom_small"
+                            android:padding="@dimen/_4sdp"
+                            android:visibility="@{ToolbarModel.progressMenu ? View.VISIBLE : View.GONE}" />
+
+                        <ImageView
+                            android:id="@+id/imgShare"
+                            style="@style/ImageViewButtonMediumCommon"
+                            android:src="@drawable/add"
+                            android:tint="@color/white"
+                            android:visibility="@{ToolbarModel.share ? View.VISIBLE : View.GONE}" />
+
+                        <ImageView
+                            android:id="@+id/imgDelete"
+                            style="@style/ImageViewButtonMediumCommon"
+                            android:src="@drawable/delete"
+                            android:tint="@color/white"
+                            android:visibility="@{ToolbarModel.delete ? View.VISIBLE : View.GONE}" />
+
+                        <ImageView
+                            android:id="@+id/imgAdd"
+                            style="@style/ImageViewButtonMediumCommon"
+                            android:src="@drawable/add"
+                            android:visibility="@{ToolbarModel.add ? View.VISIBLE : View.GONE}" />
+
+                        <ImageView
+                            android:id="@+id/imgOther"
+                            style="@style/ImageViewButtonMediumCommon"
+                            android:src="@drawable/add"
+                            android:tint="@color/white"
+                            android:visibility="@{ToolbarModel.otherMenu ? View.VISIBLE : View.GONE}" />
+
+                        <EditText
+                            android:id="@+id/etOther"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_4sdp"
+                            android:background="@drawable/et_selector_bottom_line"
+                            android:digits="0123456789"
+                            android:ellipsize="end"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/regular"
+                            android:gravity="top|bottom|start|end|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                            android:hint="@{ToolbarModel.otherEtHint}"
+                            android:imeOptions="actionDone"
+                            android:inputType="none|text|textCapCharacters|textCapWords|textUri|number|numberSigned|numberDecimal|numberPassword|phone"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:padding="@dimen/_4sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/textColorLight"
+                            android:visibility="@{ToolbarModel.otherEt ? View.VISIBLE : View.GONE}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_4sdp"
+            android:background="@drawable/toolbar_shadow"
+            android:visibility="gone" />
+    </LinearLayout>
+</layout>

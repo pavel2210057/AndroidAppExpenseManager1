@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="TransactionFilterModel"
+            type="com.crazytrends.expensemanager.appBase.models.transaction.TransactionFilterModel" />
+
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/linMain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/includedToolbar"
+            layout="@layout/toolbar_binding" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollRoot"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:fillViewport="true"
+            android:scrollbars="horizontal">
+
+            <LinearLayout
+                android:id="@+id/linRoot"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    style="@style/CardViewAddEditTransactionRow"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:cardCornerRadius="@dimen/_16sdp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_border_filter"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextViewFilterAddEditRow"
+                            android:text="@string/quick_access" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/radioSortAll"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        style="@style/ImageViewButtonMediumCommon"
+                                        android:src="@{(TransactionFilterModel.sortType == 7) || (TransactionFilterModel.sortType == 1) ? @drawable/checked :@drawable/unchecked}" />
+
+                                    <TextView
+                                        style="@style/TextViewLargeExtraRegularCommon"
+                                        android:layout_width="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:text="@string/all" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/radioSortToday"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        style="@style/ImageViewButtonMediumCommon"
+                                        android:src="@{TransactionFilterModel.sortType == 2 ? @drawable/checked :@drawable/unchecked}"
+
+                                        />
+
+                                    <TextView
+                                        style="@style/TextViewLargeExtraRegularCommon"
+                                        android:layout_width="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:text="@string/today" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:id="@+id/radioSortYesterday"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        style="@style/ImageViewButtonMediumCommon"
+                                        android:src="@{TransactionFilterModel.sortType == 3 ? @drawable/checked :@drawable/unchecked}"
+
+                                        />
+
+                                    <TextView
+                                        style="@style/TextViewLargeExtraRegularCommon"
+                                        android:layout_width="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:text="@string/yesterday" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/radioSortLastWeek"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        style="@style/ImageViewButtonMediumCommon"
+                                        android:src="@{TransactionFilterModel.sortType == 4 ? @drawable/checked :@drawable/unchecked}" />
+
+                                    <TextView
+                                        style="@style/TextViewLargeExtraRegularCommon"
+                                        android:layout_width="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:text="@string/last_week" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:id="@+id/radioSortThisMonth"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        style="@style/ImageViewButtonMediumCommon"
+                                        android:src="@{TransactionFilterModel.sortType == 5 ? @drawable/checked :@drawable/unchecked}" />
+
+                                    <TextView
+                                        style="@style/TextViewLargeExtraRegularCommon"
+                                        android:layout_width="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:text="@string/this_month" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/radioSortLastMonth"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        style="@style/ImageViewButtonMediumCommon"
+                                        android:src="@{TransactionFilterModel.sortType == 6 ? @drawable/checked :@drawable/unchecked}"
+
+                                        />
+
+                                    <TextView
+                                        style="@style/TextViewLargeExtraRegularCommon"
+                                        android:layout_width="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:text="@string/last_month" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/CardViewAddEditTransactionRow"
+                    app:cardCornerRadius="@dimen/_16sdp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_border_filter"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextViewFilterAddEditRow"
+                            android:text="@string/between_dates" />
+
+                        <LinearLayout
+                            android:id="@+id/radioDateFilter"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                style="@style/ImageViewButtonMediumCommon"
+                                android:src="@{TransactionFilterModel.dateFilter ? @drawable/checked :@drawable/unchecked}" />
+
+                            <TextView
+                                style="@style/TextViewLargeExtraRegularCommon"
+                                android:layout_width="fill_parent"
+                                android:layout_weight="1.0"
+                                android:text="@string/filter_between_two_dates" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linDates"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_8sdp"
+                            android:orientation="vertical"
+                            android:visibility="@{TransactionFilterModel.dateFilter ? View.VISIBLE : View.GONE }">
+
+                            <LinearLayout
+                                android:id="@+id/linFromDate"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
+
+                                <ImageView
+                                    style="@style/ImageViewButtonSmallCommon"
+                                    android:padding="@dimen/_4sdp"
+                                    android:src="@drawable/calendar_blank" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0">
+
+                                    <TextView
+                                        style="@style/TextViewAddEditTransactionRowLabel"
+                                        android:layout_width="fill_parent"
+                                        android:layout_weight="4.0"
+                                        android:text="@string/from" />
+
+                                    <TextView
+                                        style="@style/TextViewAddEditTransactionRowLabel"
+                                        android:layout_marginEnd="@dimen/_4sdp"
+                                        android:layout_marginRight="@dimen/_4sdp"
+                                        android:text=":" />
+
+                                    <TextView
+                                        android:id="@+id/txtFromDate"
+                                        style="@style/TextViewLargeSemiBoldCommon"
+                                        android:layout_width="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:text="@{TransactionFilterModel.fromDateFormatted}" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linToDate"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
+
+                                <ImageView
+                                    style="@style/ImageViewButtonSmallCommon"
+                                    android:padding="@dimen/_4sdp"
+                                    android:src="@drawable/calendar_blank" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0">
+
+                                    <TextView
+                                        style="@style/TextViewAddEditTransactionRowLabel"
+                                        android:layout_width="fill_parent"
+                                        android:layout_weight="4.0"
+                                        android:text="@string/to" />
+
+                                    <TextView
+                                        style="@style/TextViewAddEditTransactionRowLabel"
+                                        android:layout_marginEnd="@dimen/_4sdp"
+                                        android:layout_marginRight="@dimen/_4sdp"
+                                        android:text=":" />
+
+                                    <TextView
+                                        android:id="@+id/txtToDate"
+                                        style="@style/TextViewLargeSemiBoldCommon"
+                                        android:layout_width="fill_parent"
+                                        android:layout_weight="1.0"
+                                        android:text="@{TransactionFilterModel.toDateFormatted}" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/CardViewAddEditTransactionRow"
+                    app:cardCornerRadius="@dimen/_16sdp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_border_filter"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextViewFilterAddEditRow"
+                            android:text="@string/expense_type" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupExpense"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:id="@+id/radioTypeAll"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            style="@style/ImageViewButtonMediumCommon"
+                                            android:src="@{TransactionFilterModel.filterType == 0 ? @drawable/checked :@drawable/unchecked}" />
+
+                                        <TextView
+                                            style="@style/TextViewLargeExtraRegularCommon"
+                                            android:layout_width="fill_parent"
+                                            android:layout_weight="1.0"
+                                            android:text="@string/all" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:id="@+id/radioTypeIncome"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            style="@style/ImageViewButtonMediumCommon"
+                                            android:layout_width="28dp"
+                                            android:src="@{TransactionFilterModel.filterType == 1 ? @drawable/checked :@drawable/unchecked}" />
+
+                                        <TextView
+                                            style="@style/TextViewLargeExtraRegularCommon"
+                                            android:layout_width="fill_parent"
+                                            android:layout_weight="1.0"
+                                            android:text="@string/income" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/radioTypeExpense"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            style="@style/ImageViewButtonMediumCommon"
+                                            android:src="@{TransactionFilterModel.filterType == 2 ? @drawable/checked :@drawable/unchecked}" />
+
+                                        <TextView
+                                            style="@style/TextViewLargeExtraRegularCommon"
+                                            android:layout_width="fill_parent"
+                                            android:layout_weight="1.0"
+                                            android:text="@string/expense" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/CardViewAddEditTransactionRow"
+                    app:cardCornerRadius="@dimen/_16sdp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_border_filter"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextViewFilterAddEditRow"
+                            android:text="@string/categories" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerCategories"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="none" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/CardViewAddEditTransactionRow"
+                    app:cardCornerRadius="@dimen/_16sdp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_border_filter"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextViewFilterAddEditRow"
+                            android:text="@string/payment_modes" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerModes"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:scrollbars="none" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/toolbartheme"
+        app:contentInsetStart="0.0dip"
+        app:contentInsetStartWithNavigation="0.0dip"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Pro Version"
+        app:titleTextColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textDesc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="24.0dip"
+            android:ellipsize="end"
+            android:fontFamily="@font/bold"
+            android:padding="8.0dip"
+            android:text="@string/now_you_can_purchase_advertisement_free_version_of_our_application"
+            android:textColor="@android:color/black"
+            android:textSize="20.0dip" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPrice"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:layout_marginRight="8.0dip"
+            android:layout_marginBottom="12.0dip"
+            android:padding="48.0dip"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="8.0dip"
+            app:cardElevation="4.0dip"
+            android:layout_marginStart="8.0dip"
+            android:layout_marginEnd="8.0dip">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textPrice"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4.0dip"
+                    android:layout_weight="2.0"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:paddingTop="18.0dip"
+                    android:paddingBottom="18.0dip"
+                    android:text="--"
+                    android:textColor="@android:color/white"
+                    android:textSize="18.0dip" />
+
+                <TextView
+                    android:id="@+id/textAddFree"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="8.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@android:color/white"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center"
+                    android:padding="18.0dip"
+                    android:text="@string/add_free_version"
+                    android:textColor="@android:color/black"
+                    android:textSize="18.0dip"
+                    android:layout_marginEnd="8.0dip" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardBuyPlan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="8.0dip"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="8.0dip"
+            app:cardElevation="4.0dip">
+
+            <TextView
+                android:id="@+id/textButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:paddingLeft="24.0dip"
+                android:paddingTop="8.0dip"
+                android:paddingRight="24.0dip"
+                android:paddingBottom="8.0dip"
+                android:text="@string/buy_plan"
+                android:textColor="@android:color/white"
+                android:textSize="18.0dip"
+                android:paddingStart="24.0dip"
+                android:paddingEnd="24.0dip" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

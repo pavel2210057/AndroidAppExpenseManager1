@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">Expense Manager</string>
+
+    <string name="next" translatable="false">NEXT</string>
+    <string name="skip" translatable="false">SKIP</string>
+    <string name="start" translatable="false">GOT IT</string>
+
+    <string name="english" translatable="false">English</string>
+    <string name="hindi" translatable="false">हिंदी</string>
+    <string name="gujrati" translatable="false">ગુજરતી</string>
+    <string name="urdu" translatable="false">ٹھیکہے </string>
+
+    <string name="balance" translatable="false">Balance</string>
+    <string name="expense" translatable="false">Expense</string>
+    <string name="income" translatable="false">Income</string>
+
+    <string name="channel_name" translatable="false">All Notifications</string>
+    <string name="channel_description" translatable="false">All notifications</string>
+
+
+    <string name="appads" translatable="false">ca-app-pub-3940323907047321~8145822755</string>
+    <string name="bannerads" translatable="false">ca-app-pub-3940323907047321/4642811575</string>
+    <string name="nativeadd" translatable="false">ca-app-pub-3940323907047321/7579966104</string>
+    <string name="interstitialads" translatable="false">ca-app-pub-3940323907047321/6342265421</string>
+<!--
+    <string name="appads" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="bannerads" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="nativeadd" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="interstitialads" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+-->
+
+    <string name="language">Language</string>
+    <string name="acceptAndContinue">Accept and Continue</string>
+    <string name="add_category">Add Category</string>
+    <string name="add_edit_categories">Add edit categories</string>
+    <string name="add_edit_payment_mode">Add edit payment mode</string>
+    <string name="add_expenses">Add Expenses</string>
+    <string name="add_free_version">Ads Free Version</string>
+    <string name="add_income">Add Income</string>
+    <string name="add_payment_mode">Add Payment Mode</string>
+    <string name="ads_free_version">Pro Version (Ads Free)</string>
+    <string name="ads_settings">Ads Settings</string>
+    <string name="all">All</string>
+    <string name="all_transaction">All Transaction</string>
+    <string name="amount">Amount</string>
+    <string name="app_description1">We care about your privacy and data security.We keep this app free by showing ads.</string>
+    <string name="app_description2">Can we continue to use your data to tailor ads for you?</string>
+    <string name="app_description3">You can change your choice anytime for App Name in the app settings.</string>
+    <string name="apply">Apply</string>
+    <string name="backup_transfer_guid">Backup Transfer Guide</string>
+    <string name="between_dates">Between Dates</string>
+    <string name="buy_plan">Buy Plan</string>
+    <string name="cancel">Cancel</string>
+    <string name="categories">Categories</string>
+    <string name="category">Category</string>
+    <string name="clear_all_msg">This will clear your all income expense entries.</string>
+    <string name="clear_data">Clear All Records</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="currency">Currency</string>
+    <string name="currentMonthChart">Current Month Chart -</string>
+    <string name="date_amp_time">Date &amp; Time</string>
+    <string name="date_format">Date Format</string>
+    <string name="delete">Delete</string>
+    <string name="deleteMessage">Are you sure you want to clear all records?</string>
+    <string name="delete_all_related_data">It will be deleted all related data of this</string>
+    <string name="delete_msg">Are you sure want to delete</string>
+    <string name="demo">Demo</string>
+    <string name="drawerTitleAbout">About</string>
+    <string name="drawerTitleDemoList">DemoList</string>
+    <string name="drawerTitleFeedback">Feedback</string>
+    <string name="drawerTitleHome">Home</string>
+    <string name="drawerTitlePrivacyPolicy">Privacy Policy</string>
+    <string name="drawerTitleRatting">Rate Us</string>
+    <string name="drawerTitleSetting">Setting</string>
+    <string name="drawerTitleShare">Share with friends</string>
+    <string name="drawerTitleTermsOfService">Terms of Service</string>
+    <string name="drive_backups">Drive backups</string>
+    <string name="excel">Excel</string>
+    <string name="expense_type">Expense Type</string>
+    <string name="expenses">Expenses</string>
+    <string name="export">Export</string>
+    <string name="export_successfully">Export Successfully</string>
+    <string name="export_to_pdf">Export to Pdf</string>
+    <string name="export_transactions">Export Transactions</string>
+    <string name="export_transactions_data_as">Export transactions data as</string>
+    <string name="exported_pdf_and_excel_reports">Exported pdf and excel reports</string>
+    <string name="exported_reports">Exported Reports</string>
+    <string name="failed_to_export">Failed to export</string>
+    <string name="failed_to_import">Failed to import</string>
+    <string name="filterTransactions">Filter</string>
+    <string name="filter_between_two_dates">Apply filter between two dates</string>
+    <string name="from">From</string>
+    <string name="import_successfully">Import Successfully</string>
+    <string name="last_month">Last Month</string>
+    <string name="last_week">Last Week</string>
+    <string name="local_backups">Local Backups</string>
+    <string name="managePaymentModes">Manage Payment Modes</string>
+    <string name="merge">Merge</string>
+    <string name="mode">Mode</string>
+    <string name="name">Name</string>
+    <string name="noDataDescBackup">Please backup your data to restore</string>
+    <string name="noDataDescCategory">Please add your Category</string>
+    <string name="noDataDescDemo">Please add your demo items</string>
+    <string name="noDataDescPaymentMode">Please add your Payment Mode</string>
+    <string name="noDataDescReport">Export reports to check or share</string>
+    <string name="noDataDescTransaction">Please add your transaction</string>
+    <string name="noDataTitleBackup">No backup found</string>
+    <string name="noDataTitleCategory">No Category found</string>
+    <string name="noDataTitleDemo">No demo items</string>
+    <string name="noDataTitlePaymentMode">No Payment Mode found</string>
+    <string name="noDataTitleReport">No Reports found</string>
+    <string name="noDataTitleTransaction">No Transactions</string>
+    <string name="non_personalized">No, see ads that are less relevant</string>
+    <string name="note">Note</string>
+    <string name="now_you_can_purchase_advertisement_free_version_of_our_application">Now you can purchase advertisement free version of our application.</string>
+    <string name="ok">Ok</string>
+    <string name="payment_mode">Payment Mode</string>
+    <string name="payment_modes">Payment Modes</string>
+    <string name="pdf">PDF</string>
+    <string name="pdf_report">Pdf Report</string>
+    <string name="permissionDisclose">Permission Disclosure</string>
+    <string name="personalized">Yes, continue to see relevant ads</string>
+    <string name="please_enter">Please enter</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="quick_access">Quick Access</string>
+    <string name="rating_dialog_cancel">Cancel</string>
+    <string name="rating_dialog_experience">How was your experience with us?</string>
+    <string name="rating_dialog_feedback_title">Feedback</string>
+    <string name="rating_dialog_maybe_later">Maybe later</string>
+    <string name="rating_dialog_never">Never</string>
+    <string name="rating_dialog_submit">Submit</string>
+    <string name="rating_dialog_suggestions">"Suggest us what went wrong and we'll work on it!"</string>
+    <string name="rationale_ask">This app may not work correctly without the requested permissions.</string>
+    <string name="rationale_ask_again">This app may not work correctly without the requested permissions. Open the app settings screen to modify app permissions.</string>
+    <string name="rationale_export">We need access to your storage for export your data.</string>
+    <string name="rationale_save">We need access to your storage for saving your reports.</string>
+    <string name="report_by">Report by</string>
+    <string name="reports">Reports</string>
+    <string name="reset">Reset</string>
+    <string name="reset_msg">Are you sure want to reset</string>
+    <string name="restore">Restore</string>
+    <string name="restore_data">Restore data</string>
+    <string name="restore_data_from_drive_backups">Restore data from drive backups</string>
+    <string name="restore_data_from_local_backups">Restore data your local backups</string>
+    <string name="restore_msg">What you like to do with current data Delete or Merge</string>
+    <string name="selectPaymentMode">Select Payment Mode</string>
+    <string name="select_category">Select category</string>
+    <string name="set">Set</string>
+    <string name="sort_by">Sort by</string>
+    <string name="steps_for_transfer_backup_to_any_destinations">Steps for transfer backup to any destinations.</string>
+    <string name="take_backup">Take Backup</string>
+    <string name="take_backup_of_data">Take backup of data</string>
+    <string name="termsOfService">Terms Of Service</string>
+    <string name="termsOfServiceSummery">This app is governed by Magnetic Lab’s Terms of Service. By continuing to use this app you represent that you have read and accept the Terms of Service, Privacy Policy and Permission disclosure.</string>
+    <string name="this_month">This Month</string>
+    <string name="time_format">Time Format</string>
+    <string name="title_settings_dialog">Permissions Required</string>
+    <string name="to">To</string>
+    <string name="today">Today</string>
+    <string name="transactions">Transactions</string>
+    <string name="type">Type</string>
+    <string name="update_category">Update Category</string>
+    <string name="update_payment_mode">Update Payment Mode</string>
+    <string name="view_reports">View Reports</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="notification">Daily Notifiction</string>
+
+</resources>

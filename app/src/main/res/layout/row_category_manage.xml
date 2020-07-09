@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="CategoryRowModel"
+            type="com.crazytrends.expensemanager.appBase.roomsDB.category.CategoryRowModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            style="@style/CardViewCommon"
+            android:layout_marginTop="@dimen/_4sdp">
+
+            <LinearLayout
+                style="@style/LinearLayoutAddEditTransactionRow"
+                android:layout_margin="@dimen/_2sdp"
+                >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewLargeExtraRegularCommon"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="1.0"
+                        android:text="@{CategoryRowModel.name }" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgEdit"
+                            style="@style/ImageViewButtonMediumCommon"
+                            android:src="@drawable/edit" />
+
+                        <ImageView
+                            android:id="@+id/imgDelete"
+                            style="@style/ImageViewButtonMediumCommon"
+                            android:src="@drawable/delete"
+                            android:visibility="@{CategoryRowModel.isDefault ? View.GONE : View.VISIBLE }" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>
