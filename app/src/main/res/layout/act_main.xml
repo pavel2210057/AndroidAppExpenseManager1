@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="StatisticsListModel"
+            type="com.crazytrends.expensemanager.appBase.models.StatisticsListModel" />
+    </data>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/linMain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/libottom"
+            >
+            <FrameLayout
+                android:id="@+id/frame_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+            <RelativeLayout
+                android:id="@+id/rlhome"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="@color/background"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rl_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/banner">
+
+
+                    <LinearLayout
+                        android:id="@+id/linRoot"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <include
+                            android:id="@+id/includedToolbar"
+                            layout="@layout/toolbar_binding_act" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:gravity="center">
+
+
+                            <FrameLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0">
+
+                                <LinearLayout
+                                    android:id="@+id/linData"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:orientation="vertical">
+
+                                        <com.github.mikephil.charting.charts.PieChart
+                                            android:id="@+id/chart"
+                                            android:layout_width="180dp"
+                                            android:layout_height="180dp"
+                                            />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/txtMonth"
+                                            style="@style/TextViewSmallRegularCommon"
+                                            android:layout_width="fill_parent"
+                                            android:gravity="center"
+                                            android:padding="@dimen/_4sdp"
+                                            android:visibility="gone" />
+
+                                        <LinearLayout
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:id="@+id/txtIncome"
+                                                style="@style/TextViewMediumRegularCommon"
+                                                android:layout_width="fill_parent"
+                                                android:layout_marginStart="@dimen/_12sdp"
+                                                android:layout_marginLeft="@dimen/_12sdp"
+                                                android:layout_weight="1.0"
+                                                android:gravity="center"
+                                                android:textColor="@color/income" />
+
+                                            <TextView
+                                                android:id="@+id/txtExpense"
+                                                style="@style/TextViewMediumRegularCommon"
+                                                android:layout_width="fill_parent"
+                                                android:layout_marginStart="@dimen/_4sdp"
+                                                android:layout_marginLeft="@dimen/_4sdp"
+                                                android:layout_marginEnd="@dimen/_4sdp"
+                                                android:layout_marginRight="@dimen/_4sdp"
+                                                android:layout_weight="1.0"
+                                                android:gravity="center"
+                                                android:textColor="@color/expense" />
+
+                                            <TextView
+                                                android:id="@+id/txtBalance"
+                                                style="@style/TextViewMediumRegularCommon"
+                                                android:layout_width="fill_parent"
+                                                android:layout_marginEnd="@dimen/_12sdp"
+                                                android:layout_marginRight="@dimen/_12sdp"
+                                                android:layout_weight="1.0"
+                                                android:gravity="center"
+                                                android:textColor="@color/balance" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/linNoData"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        style="@style/ImageViewNoDataCommon"
+                                        android:src="@drawable/no_data" />
+
+                                    <TextView
+                                        style="@style/TextViewNoDataTitle"
+                                        android:text="@{StatisticsListModel.noDataText}"
+                                        android:textColor="@color/white"
+                                        />
+
+                                    <TextView
+                                        style="@style/TextViewNoDataDesc"
+                                        android:text="@{StatisticsListModel.noDataDetail}"
+                                        android:textColor="@color/white"
+                                        />
+                                </LinearLayout>
+                            </FrameLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_below="@+id/linRoot"
+                        android:background="@android:color/transparent" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lil_secind"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rl_first"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="0">
+
+                    <ImageView
+                        android:id="@+id/linAddIncome"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_32sdp"
+                        android:src="@drawable/btn_add_income" />
+
+                    <ImageView
+                        android:id="@+id/linAddExpense"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_32sdp"
+                        android:src="@drawable/btn_add_expenses"
+
+                        />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/libottom"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="0">
+
+            <ImageView
+                android:id="@+id/iv_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/_14sdp"
+                android:src="@drawable/ic_home"
+                android:tint="@color/primey" />
+
+            <ImageView
+                android:id="@+id/iv_transaction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/_14sdp"
+                android:src="@drawable/ic_transaction" />
+
+            <ImageView
+                android:id="@+id/iv_reports"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/_14sdp"
+                android:src="@drawable/ic_reports" />
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/_14sdp"
+                android:src="@drawable/ic_setting" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</layout>

@@ -77,9 +77,9 @@ public class ModeAdapter extends RecyclerView.Adapter {
 
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         if (!this.isManage) {
-            return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_mode, viewGroup, false));
+            return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_mode_act, viewGroup, false));
         }
-        return new RowManageHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_mode_manage, viewGroup, false));
+        return new RowManageHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_mode_manage_act, viewGroup, false));
     }
 
 

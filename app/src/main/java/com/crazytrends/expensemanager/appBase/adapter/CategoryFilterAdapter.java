@@ -49,7 +49,7 @@ public class CategoryFilterAdapter extends RecyclerView.Adapter {
     }
 
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_category_filter, viewGroup, false));
+        return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_category_filter_act, viewGroup, false));
     }
 
 

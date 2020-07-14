@@ -36,6 +36,6 @@ public class HomeFragment extends BaseFragmentBinding {
 
 
     public void setBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
-        this.binding = (FragmentMainBinding) DataBindingUtil.inflate(layoutInflater, R.layout.fragment_main, viewGroup, false);
+        this.binding = (FragmentMainBinding) DataBindingUtil.inflate(layoutInflater, R.layout.fragment_main_act, viewGroup, false);
     }
 }

@@ -56,9 +56,9 @@ public class TransactionAdapter extends RecyclerView.Adapter {
 
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         if (i == 1) {
-            return new HeaderHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_transaction_header, viewGroup, false));
+            return new HeaderHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_transaction_header_act, viewGroup, false));
         }
-        return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_transaction, viewGroup, false));
+        return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_transaction_act, viewGroup, false));
     }
 
 

@@ -13,7 +13,7 @@ import androidx.core.app.NotificationCompat;
 
 import com.crazytrends.expensemanager.R;
 import com.crazytrends.expensemanager.appBase.MyApp;
-import com.crazytrends.expensemanager.appBase.view.MainActivity;
+import com.crazytrends.expensemanager.appBase.view.MainAct;
 
 
 public class NotificationPublisher extends BroadcastReceiver {
@@ -38,7 +38,7 @@ public class NotificationPublisher extends BroadcastReceiver {
 
     private Notification buildNotification(Context ctx) {
         Intent intent =
-                new Intent(ctx, MainActivity.class);
+                new Intent(ctx, MainAct.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(ctx, 0, intent, 0);
         Bitmap bitmap = BitmapFactory.decodeResource(ctx.getResources(), R.mipmap.ic_launcher);

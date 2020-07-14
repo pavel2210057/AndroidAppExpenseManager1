@@ -50,7 +50,7 @@ public class ModeFilterAdapter extends RecyclerView.Adapter {
     }
 
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_mode_filter, viewGroup, false));
+        return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_mode_filter_act, viewGroup, false));
     }
 
 

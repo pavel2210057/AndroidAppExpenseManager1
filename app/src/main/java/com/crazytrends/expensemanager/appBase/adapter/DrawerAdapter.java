@@ -47,7 +47,7 @@ public class DrawerAdapter extends RecyclerView.Adapter {
     }
 
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_drawer_item, viewGroup, false));
+        return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_drawer_item_act, viewGroup, false));
     }
 
 

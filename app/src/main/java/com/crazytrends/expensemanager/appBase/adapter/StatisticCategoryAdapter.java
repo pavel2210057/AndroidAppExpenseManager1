@@ -38,7 +38,7 @@ public class StatisticCategoryAdapter extends RecyclerView.Adapter {
     }
 
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_statistic_category, viewGroup, false));
+        return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_statistic_category_act, viewGroup, false));
     }
 
 

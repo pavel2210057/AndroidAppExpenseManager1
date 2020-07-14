@@ -45,7 +45,7 @@ public class DemoAdapter extends RecyclerView.Adapter {
     }
 
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_demo, viewGroup, false));
+        return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_demo_act, viewGroup, false));
     }
 
 

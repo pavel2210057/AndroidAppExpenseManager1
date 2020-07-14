@@ -69,7 +69,7 @@ public class DemoListFragment extends BaseFragmentRecyclerBinding {
 
 
     public void setBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
-        this.binding = (FragmentDemoListBinding) DataBindingUtil.inflate(layoutInflater, R.layout.fragment_demo_list, viewGroup, false);
+        this.binding = (FragmentDemoListBinding) DataBindingUtil.inflate(layoutInflater, R.layout.fragment_demo_list_act, viewGroup, false);
         this.model = new DemoListModel();
         this.model.setArrayList(new ArrayList());
         this.model.setNoDataIcon(R.drawable.no_data);
@@ -150,10 +150,10 @@ public class DemoListFragment extends BaseFragmentRecyclerBinding {
 
 
     public void openItemDetail(int i, DemoRowModel demoRowModel, boolean z) {
-        Intent intent = new Intent(this.context, AddEditDemoActivity.class);
-        intent.putExtra(AddEditDemoActivity.EXTRA_IS_EDIT, z);
-        intent.putExtra(AddEditDemoActivity.EXTRA_POSITION, i);
-        intent.putExtra(AddEditDemoActivity.EXTRA_MODEL, demoRowModel);
+        Intent intent = new Intent(this.context, AddEditDemoAct.class);
+        intent.putExtra(AddEditDemoAct.EXTRA_IS_EDIT, z);
+        intent.putExtra(AddEditDemoAct.EXTRA_POSITION, i);
+        intent.putExtra(AddEditDemoAct.EXTRA_MODEL, demoRowModel);
         intent.setFlags(67108864);
         startActivityForResult(intent, 1002);
     }
@@ -185,12 +185,12 @@ public class DemoListFragment extends BaseFragmentRecyclerBinding {
     private void updateList(Intent intent) {
         if (intent != null) {
             try {
-                if (intent.hasExtra(AddEditDemoActivity.EXTRA_MODEL)) {
-                    DemoRowModel demoRowModel = (DemoRowModel) intent.getParcelableExtra(AddEditDemoActivity.EXTRA_MODEL);
-                    if (intent.getBooleanExtra(AddEditDemoActivity.EXTRA_IS_DELETED, false)) {
-                        this.model.getArrayList().remove(intent.getIntExtra(AddEditDemoActivity.EXTRA_POSITION, 0));
-                    } else if (intent.getBooleanExtra(AddEditDemoActivity.EXTRA_IS_EDIT, false)) {
-                        this.model.getArrayList().set(intent.getIntExtra(AddEditDemoActivity.EXTRA_POSITION, 0), demoRowModel);
+                if (intent.hasExtra(AddEditDemoAct.EXTRA_MODEL)) {
+                    DemoRowModel demoRowModel = (DemoRowModel) intent.getParcelableExtra(AddEditDemoAct.EXTRA_MODEL);
+                    if (intent.getBooleanExtra(AddEditDemoAct.EXTRA_IS_DELETED, false)) {
+                        this.model.getArrayList().remove(intent.getIntExtra(AddEditDemoAct.EXTRA_POSITION, 0));
+                    } else if (intent.getBooleanExtra(AddEditDemoAct.EXTRA_IS_EDIT, false)) {
+                        this.model.getArrayList().set(intent.getIntExtra(AddEditDemoAct.EXTRA_POSITION, 0), demoRowModel);
                     } else {
                         this.model.getArrayList().add(demoRowModel);
                     }

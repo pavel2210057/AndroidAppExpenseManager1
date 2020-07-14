@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="RestoreListModel"
+            type="com.crazytrends.expensemanager.backupRestore.RestoreListModel" />
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/includedToolbar"
+        layout="@layout/toolbar_binding_act"
+       />
+
+    <TextView
+        android:id="@+id/txtPath"
+        style="@style/TextViewMediumRegularCommon"
+        android:layout_width="fill_parent"
+        android:background="@color/colorRipple"
+        android:padding="4.0dip"
+        android:textColor="@color/white" />
+<!--    android:tag="binding_1"-->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <LinearLayout
+            android:id="@+id/linData"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="@{RestoreListModel.isListData ? View.VISIBLE : View.GONE }"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linNoData"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="@{RestoreListModel.isListData ? View.GONE : View.VISIBLE }"
+            >
+
+            <ImageView
+                style="@style/ImageViewNoDataCommon"
+                android:layout_marginTop="24.0dip"
+                android:src="@drawable/no_data"
+                />
+
+            <TextView
+                style="@style/TextViewMediumRegularCommon"
+                android:layout_marginTop="16.0dip"
+                android:textColor="@color/actionbar"
+                android:text="@{RestoreListModel.noDataText}"
+                />
+
+            <TextView
+                style="@style/TextViewMediumRegularCommon"
+                android:layout_marginTop="4.0dip"
+                android:gravity="center"
+                android:text="@{RestoreListModel.noDataDetail}"
+                android:textSize="16.0dip" />
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAdd"
+            style="@style/FloatingActionButtonCommon"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>
+</layout>

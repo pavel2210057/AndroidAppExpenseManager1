@@ -169,4 +169,7 @@
     <string name="yesterday">Yesterday</string>
     <string name="notification">Daily Notifiction</string>
 
+    <string name="facebook_app_id" translatable="false">TODO</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_manner_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
 </resources>

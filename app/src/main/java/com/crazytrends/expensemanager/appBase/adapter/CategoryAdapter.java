@@ -80,9 +80,9 @@ public class CategoryAdapter extends RecyclerView.Adapter {
 
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         if (!this.isManage) {
-            return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_category, viewGroup, false));
+            return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_category_act, viewGroup, false));
         }
-        return new RowManageHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_category_manage, viewGroup, false));
+        return new RowManageHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_category_manage_act, viewGroup, false));
     }
 
 

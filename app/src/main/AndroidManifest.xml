@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.crazytrends.expensemanager">
+    package="com.crazytrends.expensemanager"
+    xmlns:dist="http://schemas.android.com/apk/distribution">
+
+    <dist:module dist:instant="true" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -9,6 +12,7 @@
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
     <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -41,7 +45,7 @@
         </provider>
 
         <activity
-            android:name="com.crazytrends.expensemanager.intro.WelcomeActivity"
+            android:name="com.crazytrends.expensemanager.intro.WelcomeAct"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -52,90 +56,90 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.crazytrends.expensemanager.appBase.view.SplashActivity"
-            android:screenOrientation="portrait"></activity>
+            android:name="com.crazytrends.expensemanager.appBase.view.SplashAct"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name="com.crazytrends.expensemanager.appBase.view.ExpenseDisclosure"
+            android:name="com.crazytrends.expensemanager.appBase.view.ExpenseDisclosureAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name="com.crazytrends.expensemanager.appBase.view.MainActivityPager"
+            android:name="com.crazytrends.expensemanager.appBase.view.MainActPager"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name="com.crazytrends.expensemanager.appBase.view.MainActivity"
+            android:name="com.crazytrends.expensemanager.appBase.view.MainAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.crazytrends.expensemanager.appBase.view.AddEditDemoActivity"
+            android:name="com.crazytrends.expensemanager.appBase.view.AddEditDemoAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.crazytrends.expensemanager.appBase.view.TransactionListActivity"
+            android:name="com.crazytrends.expensemanager.appBase.view.TransactionListAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.crazytrends.expensemanager.appBase.view.AddEditTransactionActivity"
+            android:name="com.crazytrends.expensemanager.appBase.view.AddEditTransactionAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.crazytrends.expensemanager.appBase.view.CategoryListActivity"
+            android:name="com.crazytrends.expensemanager.appBase.view.CategoryListAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.crazytrends.expensemanager.appBase.view.PaymentModeListActivity"
+            android:name="com.crazytrends.expensemanager.appBase.view.PaymentModeListAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.crazytrends.expensemanager.appBase.view.AddEditTransactionFilterActivity"
+            android:name="com.crazytrends.expensemanager.appBase.view.AddEditTransactionFilterAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.crazytrends.expensemanager.pdfReport.ReportsListActivity"
+            android:name="com.crazytrends.expensemanager.pdfReport.ReportsListAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.crazytrends.expensemanager.appBase.view.StatisticsActivity"
+            android:name="com.crazytrends.expensemanager.appBase.view.StatisticsAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.crazytrends.expensemanager.backupRestore.BackupTransferGuidActivity"
+            android:name="com.crazytrends.expensemanager.backupRestore.BackupTransferGuidAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.crazytrends.expensemanager.backupRestore.RestoreListActivity"
+            android:name="com.crazytrends.expensemanager.backupRestore.RestoreListAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.crazytrends.expensemanager.backupRestore.RestoreDriveListActivity"
+            android:name="com.crazytrends.expensemanager.backupRestore.RestoreDriveListAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
@@ -161,6 +165,28 @@
             android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+
+        <receiver android:name="com.appsflyer.SingleInstallBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <!--<service
+            android:name=".utils.CustomNotificationExtender"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.onesignal.NotificationExtender" />
+            </intent-filter>
+        </service>-->
 
     </application>
 </manifest>

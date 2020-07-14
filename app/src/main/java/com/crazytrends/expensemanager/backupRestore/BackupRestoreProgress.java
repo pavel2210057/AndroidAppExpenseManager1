@@ -17,7 +17,7 @@ public class BackupRestoreProgress {
         this.progressDialog = new Dialog(activity2);
         this.activity = activity2;
         this.weakReference = new WeakReference<>(activity2);
-        this.progressDialog.setContentView(R.layout.progress_dialog);
+        this.progressDialog.setContentView(R.layout.progress_dialog_act);
         this.textView = (TextView) this.progressDialog.findViewById(R.id.message);
         this.progressDialog.setCancelable(false);
     }

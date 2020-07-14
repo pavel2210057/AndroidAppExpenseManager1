@@ -42,19 +42,19 @@ public class CustomSpinnerAdapter extends BaseAdapter implements SpinnerAdapter 
 
     public View getDropDownView(int i, View view, ViewGroup viewGroup) {
         if (!this.isValueOnly) {
-            RowCustomSpinnerItemOpenBinding rowCustomSpinnerItemOpenBinding = (RowCustomSpinnerItemOpenBinding) DataBindingUtil.inflate(LayoutInflater.from(this.context), R.layout.row_custom_spinner_item_open, viewGroup, false);
+            RowCustomSpinnerItemOpenBinding rowCustomSpinnerItemOpenBinding = (RowCustomSpinnerItemOpenBinding) DataBindingUtil.inflate(LayoutInflater.from(this.context), R.layout.row_custom_spinner_item_open_act, viewGroup, false);
             rowCustomSpinnerItemOpenBinding.setSpinnerRowModel((SpinnerRowModel) this.list.get(i));
             rowCustomSpinnerItemOpenBinding.executePendingBindings();
             return rowCustomSpinnerItemOpenBinding.getRoot();
         }
-        RowCustomSpinnerItemOpenValueBinding rowCustomSpinnerItemOpenValueBinding = (RowCustomSpinnerItemOpenValueBinding) DataBindingUtil.inflate(LayoutInflater.from(this.context), R.layout.row_custom_spinner_item_open_value, viewGroup, false);
+        RowCustomSpinnerItemOpenValueBinding rowCustomSpinnerItemOpenValueBinding = (RowCustomSpinnerItemOpenValueBinding) DataBindingUtil.inflate(LayoutInflater.from(this.context), R.layout.row_custom_spinner_item_open_value_act, viewGroup, false);
         rowCustomSpinnerItemOpenValueBinding.setSpinnerRowModel((SpinnerRowModel) this.list.get(i));
         rowCustomSpinnerItemOpenValueBinding.executePendingBindings();
         return rowCustomSpinnerItemOpenValueBinding.getRoot();
     }
 
     public View getView(int i, View view, ViewGroup viewGroup) {
-        RowCustomSpinnerItemBinding rowCustomSpinnerItemBinding = (RowCustomSpinnerItemBinding) DataBindingUtil.inflate(LayoutInflater.from(this.context), R.layout.row_custom_spinner_item, viewGroup, false);
+        RowCustomSpinnerItemBinding rowCustomSpinnerItemBinding = (RowCustomSpinnerItemBinding) DataBindingUtil.inflate(LayoutInflater.from(this.context), R.layout.row_custom_spinner_item_act, viewGroup, false);
         rowCustomSpinnerItemBinding.setSpinnerRowModel((SpinnerRowModel) this.list.get(i));
         rowCustomSpinnerItemBinding.executePendingBindings();
         return rowCustomSpinnerItemBinding.getRoot();

@@ -69,7 +69,7 @@ public class ReportPdfAdapter extends RecyclerView.Adapter {
 
     @NonNull
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.report_pdf_item, viewGroup, false));
+        return new RowHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.report_pdf_item_act, viewGroup, false));
     }
 
 

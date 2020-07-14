@@ -56,7 +56,7 @@ public class RestoreAdapter extends RecyclerView.Adapter<RestoreAdapter.ViewHold
     }
 
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new ViewHolder(LayoutInflater.from(this.context).inflate(R.layout.restore_item, viewGroup, false));
+        return new ViewHolder(LayoutInflater.from(this.context).inflate(R.layout.restore_item_act, viewGroup, false));
     }
 
     public void onBindViewHolder(ViewHolder viewHolder, int i) {

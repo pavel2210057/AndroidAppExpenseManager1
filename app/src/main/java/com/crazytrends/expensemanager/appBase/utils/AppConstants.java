@@ -446,7 +446,7 @@ public class AppConstants {
 
     public static void showTwoButtonDialog(Context context, String str, String str2, boolean z, boolean z2, String str3, String str4, final TwoButtonDialogListener twoButtonDialogListener) {
         int i = 0;
-        AlertDialogTwoButtonBinding alertDialogTwoButtonBinding = (AlertDialogTwoButtonBinding) DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.alert_dialog_two_button, null, false);
+        AlertDialogTwoButtonBinding alertDialogTwoButtonBinding = (AlertDialogTwoButtonBinding) DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.alert_dialog_two_button_act, null, false);
         final Dialog dialog = new Dialog(context);
         dialog.setContentView(alertDialogTwoButtonBinding.getRoot());
         dialog.setCancelable(z);
@@ -490,7 +490,7 @@ public class AppConstants {
     }
 
     public static void pdfReportDialog(Context context, final TwoButtonDialogListener twoButtonDialogListener) {
-        AlertDialogPdfReportBinding alertDialogPdfReportBinding = (AlertDialogPdfReportBinding) DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.alert_dialog_pdf_report, null, false);
+        AlertDialogPdfReportBinding alertDialogPdfReportBinding = (AlertDialogPdfReportBinding) DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.alert_dialog_pdf_report_act, null, false);
         final Dialog dialog = new Dialog(context);
         dialog.setContentView(alertDialogPdfReportBinding.getRoot());
         dialog.setCancelable(true);
@@ -552,7 +552,7 @@ public class AppConstants {
 
     public static void showRestoreDialog(Context context, String str, String str2, boolean z, boolean z2, String str3, String str4, final TwoButtonDialogListener twoButtonDialogListener) {
         int i = 0;
-        AlertDialogRestoreBinding alertDialogRestoreBinding = (AlertDialogRestoreBinding) DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.alert_dialog_restore, null, false);
+        AlertDialogRestoreBinding alertDialogRestoreBinding = (AlertDialogRestoreBinding) DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.alert_dialog_restore_act, null, false);
         final Dialog dialog = new Dialog(context);
         dialog.setContentView(alertDialogRestoreBinding.getRoot());
         dialog.setCancelable(z);

@@ -23,7 +23,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
 
 import com.crazytrends.expensemanager.R;
 import com.crazytrends.expensemanager.appBase.adapter.CustomSpinnerAdapter;
@@ -37,17 +36,16 @@ import com.crazytrends.expensemanager.appBase.utils.Constants;
 import com.crazytrends.expensemanager.appBase.utils.TwoButtonDialogListener;
 import com.crazytrends.expensemanager.backupRestore.BackupRestore;
 import com.crazytrends.expensemanager.backupRestore.BackupRestoreProgress;
-import com.crazytrends.expensemanager.backupRestore.BackupTransferGuidActivity;
+import com.crazytrends.expensemanager.backupRestore.BackupTransferGuidAct;
 import com.crazytrends.expensemanager.backupRestore.OnBackupRestore;
 //import com.crazytrends.expensemanager.backupRestore.RemoteBackup;
-import com.crazytrends.expensemanager.backupRestore.RestoreDriveListActivity;
-import com.crazytrends.expensemanager.backupRestore.RestoreListActivity;
+import com.crazytrends.expensemanager.backupRestore.RestoreDriveListAct;
+import com.crazytrends.expensemanager.backupRestore.RestoreListAct;
 import com.crazytrends.expensemanager.backupRestore.RestoreRowModel;
 import com.crazytrends.expensemanager.dailyAlarm.NotificationPublisher;
 import com.crazytrends.expensemanager.databinding.ActivitySettingBinding;
 import com.crazytrends.expensemanager.databinding.AlertDialogBackupBinding;
-import com.crazytrends.expensemanager.intro.Util;
-import com.crazytrends.expensemanager.pdfReport.ReportsListActivity;
+import com.crazytrends.expensemanager.pdfReport.ReportsListAct;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -101,7 +99,7 @@ public class SettingActivity extends BaseFragmentSetting implements PermissionCa
 
 
     public void setBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
-        binding = (ActivitySettingBinding) DataBindingUtil.inflate(layoutInflater, R.layout.activity_setting, viewGroup, false);
+        binding = (ActivitySettingBinding) DataBindingUtil.inflate(layoutInflater, R.layout.act_setting, viewGroup, false);
         backupRestore = new BackupRestore(getActivity());
         progressDialog = new BackupRestoreProgress(getActivity());
     }
@@ -173,22 +171,22 @@ public class SettingActivity extends BaseFragmentSetting implements PermissionCa
                     });
                     return;
                 case R.id.cardViewBackupTransferGuid:
-                    startActivity(new Intent(context, BackupTransferGuidActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                    startActivity(new Intent(context, BackupTransferGuidAct.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                     return;
                 case R.id.cardViewCategory:
-                    startActivity(new Intent(context, CategoryListActivity.class));
+                    startActivity(new Intent(context, CategoryListAct.class));
                     return;
                 case R.id.cardViewDriveBackups:
-                    startActivityForResult(new Intent(context, RestoreDriveListActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP), 1002);
+                    startActivityForResult(new Intent(context, RestoreDriveListAct.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP), 1002);
                     return;
                 case R.id.cardViewExportedReports:
-                    startActivity(new Intent(getContext(), ReportsListActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                    startActivity(new Intent(getContext(), ReportsListAct.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                     return;
                 case R.id.cardViewLocalBackups:
-                    startActivityForResult(new Intent(context, RestoreListActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP), 1002);
+                    startActivityForResult(new Intent(context, RestoreListAct.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP), 1002);
                     return;
                 case R.id.cardViewPaymentMode:
-                    startActivity(new Intent(context, PaymentModeListActivity.class));
+                    startActivity(new Intent(context, PaymentModeListAct.class));
                     return;
                 case R.id.cardViewTakeBackup:
                     checkPermAndBackup();
@@ -1623,7 +1621,7 @@ public class SettingActivity extends BaseFragmentSetting implements PermissionCa
     }
 
     public void setBackupDialog() {
-        dialogBackupBinding = (AlertDialogBackupBinding) DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.alert_dialog_backup, null, false);
+        dialogBackupBinding = (AlertDialogBackupBinding) DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.alert_dialog_backup_act, null, false);
         dialogBackup = new Dialog(context);
         dialogBackup.setContentView(dialogBackupBinding.getRoot());
         dialogBackup.getWindow().setBackgroundDrawableResource(17170445);
